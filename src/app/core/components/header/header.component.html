@@ -1,49 +1,132 @@
 <nav class="main-header navbar navbar-expand bg-header">
-    <div>
-      <button
-        type="button"
-        class="btn btn-link btn-sm"
-        id="sidebarToggle"
-        (click)="toggleSidebar()"
+  <div>
+    <button
+      type="button"
+      class="btn btn-link btn-sm"
+      id="sidebarToggle"
+      (click)="toggleSidebar()"
+    >
+      <i
+        class="fa baricon"
+        [ngClass]="isMenuVisible ? 'fa-arrow-circle-o-left' : 'fa-align-left'"
+      ></i>
+    </button>
+  </div>
+
+  <div class="navbar-brand navbar-brand-center">
+    <img class="navbar-brand-logo" src="assets/images/logo.jpg" />
+    <span class="navbar-brand-text app-title">
+      Chandigarh Administration Portal</span
+    >
+  </div>
+
+  <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
+    <!----------------------------Home------------------>
+    <li class="nav-item header-item border-right">
+      <!--border-right-->
+      <a class="nav-link" href="javascript:void(0);">
+        <i class="fa fa-home" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!----------------------------/Home------------------>
+    <!----------------------------Notification------------------>
+    <li class="nav-item header-item" dropdown>
+      <a
+        class="nav-link dropdown-toggle"
+        href="javascript:void(0);"
+        dropdownToggle
+        aria-controls="dropdown-basic"
       >
-        <i class="fa baricon" [ngClass]="isMenuVisible ? 'fa-arrow-circle-o-left' : 'fa-align-left'"></i>
-      </button>
-    </div>
-  
-    <div class="navbar-brand navbar-brand-center">
-      <img
-        class="navbar-brand-logo"
-        src="assets/images/logo.jpg"
-      />
-      <span class="navbar-brand-text app-title"> Chandigarh Administration Portal</span>
-    </div>
-    
-      <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
-      <li class="nav-item">
-        <div class="user-panel "><!--d-flex ml-auto-->
-          <div class="image">
-            <img
-              src="assets/images/user.jpg"
-              class="img-circle elevation-2"
-              alt="User Image"
-            />
-            
-          </div>
-          <label class="username">Username Title</label>
-         
-        </div>
-      </li>
-      <li class="nav-item header-item">
-        <a class="nav-link" href="javascript:void(0);">
-          <i class="fa fa-bell" aria-hidden="true"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="javascript:void(0);" title="Logout">
-          <i class="fa fa-sign-out" aria-hidden="true"></i>
-        </a>
-      </li>
-      
-    </ul>
-  </nav>
+        <i class="fa fa-bell" aria-hidden="true"></i>
+        <span class="badge badge-warning navbar-badge">15</span>
+        <ul
+          id="dropdown-basic"
+          *dropdownMenu
+          class="dropdown-menu notification-dropdown"
+          role="menu"
+          aria-labelledby="button-basic"
+        >
+          <li role="menuitem">
+            <a
+              class="dropdown-item dropdown-heading p-2"
+              href="javascript:void(0);"
+            >
+              <i class="fa fa-bell-o mr-2 text-white"></i>
+              <span class="heading-text">Notifications</span>
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item p-3" href="javascript:void(0);">
+              <div class="media">
+                <img src="assets/images/user.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Brad Diesel
+                  </h3>
+                  <p class="text-sm subject-msg m-0">Call me whenever you can...</p>
+                  <p class="text-sm text-muted m-0"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem">
+            <a class="dropdown-item p-3" href="javascript:void(0);">
+              <div class="media">
+                <img src="assets/images/1.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Brad Diesel
+                  </h3>
+                  <p class="text-sm subject-msg m-0">It is a long established fact...</p>
+                  <p class="text-sm text-muted m-0"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <li class="divider dropdown-divider"></li>
+          <!-- <li role="menuitem">
+            <a class="dropdown-item p-3" href="javascript:void(0);">
+              <div class="media">
+                <img src="assets/images/2.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+                <div class="media-body">
+                  <h3 class="dropdown-item-title">
+                    Brad Diesel
+                  </h3>
+                  <p class="text-sm subject-msg m-0">It is a long established fact...</p>
+                  <p class="text-sm text-muted m-0"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="divider dropdown-divider"></li> -->
+          <a href="javascript:void(0);" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </ul>
+      </a>
+    </li>
+    <!----------------------------/Notification------------------>
+    <!----------------------------User Profile------------------>
+    <li class="nav-item">
+      <div class="user-panel">
+        <!-- <div class="image">
+          <img
+            src="assets/images/user.jpg"
+            class="img-circle elevation-2"
+            alt="User Image"
+          />
+        </div> -->
+        <label class="username">Username Title</label>
+      </div>
+    </li>
+    <!----------------------------/User Profile------------------>
+
+    <!----------------------------Logout------------------>
+    <li class="nav-item">
+      <a class="nav-link" href="javascript:void(0);" title="Logout">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+      </a>
+    </li>
+    <!----------------------------Logout------------------>
+  </ul>
+</nav>

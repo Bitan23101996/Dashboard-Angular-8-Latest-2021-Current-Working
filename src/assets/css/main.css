@@ -1,11 +1,12 @@
 body {
     background: #f1f4f5;
+    overflow-y: hidden;
 }
 
 /*Customize Scroll bar*/
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 10px;
     height: 10px;
 }
 
@@ -30,7 +31,7 @@ body {
     left: 0;
     z-index: 1030;
     padding-left: 0;
-    height: 55px;
+    height: 70px;
     border-bottom: 1px solid #dee2e6;
 }
 
@@ -48,11 +49,11 @@ body {
 .sidebar {
     max-height: 100%;
     position: fixed;
-    top: 55px;
+    top: 70px;
     /* left: -314px; */
     z-index: 9;
     overflow-y: auto;
-    height: calc(100vh - 55px);
+    height: calc(100vh - 70px);
     /* background: #f9f9f9; */
     border-right: 1px solid #f9f9f9;
     -webkit-transition: left .3s ease, width .3s ease;
@@ -161,6 +162,7 @@ body {
 .main-header.navbar-expand .navbar-nav .nav-link {
     padding-right: 1.1rem !important;
     padding-left: 1.1rem !important;
+    font-size: 1.2rem;
 }
 
 .main-header .navbar-brand {
@@ -247,7 +249,7 @@ a:hover {
 
 .content {
     overflow-y: auto;
-    max-height: calc(100vh - 140px);
+    max-height: calc(100vh - 160px);
 }
 
 /* .sidebar-content ul li.active .collapse-arrow.fa-angle-double-left {
@@ -274,7 +276,7 @@ footer {
 }
 
 .navbar-brand-logo {
-    height: 50px;
+    height: 60px;
 }
 
 .navbar-brand-text {
@@ -298,15 +300,15 @@ footer {
 }
 
 .header-item .navbar-badge {
-    background-color: #ff3c7e;
+    /* background-color: #ff3c7e; */
     border-radius: 50px;
     color: #fff;
     font-size: 10px;
     line-height: 1;
     padding: 3px 5.5px;
     position: absolute;
-    right: 4px;
-    top: 4px;
+    right: 7px;
+    top: 8px;
 }
 
 .main-header.navbar {
@@ -335,9 +337,11 @@ footer {
 
 .user-panel .username {
     margin-left: 10px;
-    color: #8b8b8c;
-    margin-top: 5px;
+    color: #353535;
+    margin-top: 10px;
     font-family: inherit;
+    font-weight: 600;
+    letter-spacing: 0.7px;
 }
 
 /*Dashboard Card type-1 Customisation*/
@@ -452,6 +456,8 @@ footer {
         display: block;
     }
 }
+
+/*Notification drop down customisse*/
 
 
 /*------------------------Theme 1 : White--------------------------------*/
@@ -641,6 +647,10 @@ footer {
     box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
 }
 
+/*Top Notification icon */
+.theme2 .header-item .navbar-badge {
+    background-color: #ff932b;
+}
 
 /*--------------------------------------Theme 3 : Dark : #0a253f--------------------------------*/
 
@@ -679,3 +689,4 @@ footer {
 .theme3 .wrapper .sidebar-content .submenu-text, .theme3 .wrapper .sidebar-content .menu-text, .theme3 .wrapper .sidebar-content .submenu-icon, .theme3 .wrapper .sidebar-content .collapse-arrow {
     color: #c5c3c3;
 }
+
