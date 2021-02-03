@@ -1,0 +1,49 @@
+<nav class="main-header navbar navbar-expand bg-header">
+    <div>
+      <button
+        type="button"
+        class="btn btn-link btn-sm"
+        id="sidebarToggle"
+        (click)="toggleSidebar()"
+      >
+        <i class="fa baricon" [ngClass]="isMenuVisible ? 'fa-arrow-circle-o-left' : 'fa-align-left'"></i>
+      </button>
+    </div>
+  
+    <div class="navbar-brand navbar-brand-center">
+      <img
+        class="navbar-brand-logo"
+        src="assets/images/logo.jpg"
+      />
+      <span class="navbar-brand-text app-title"> Chandigarh Administration Portal</span>
+    </div>
+    
+      <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <li class="nav-item">
+        <div class="user-panel "><!--d-flex ml-auto-->
+          <div class="image">
+            <img
+              src="assets/images/user.jpg"
+              class="img-circle elevation-2"
+              alt="User Image"
+            />
+            
+          </div>
+          <label class="username">Username Title</label>
+         
+        </div>
+      </li>
+      <li class="nav-item header-item">
+        <a class="nav-link" href="javascript:void(0);">
+          <i class="fa fa-bell" aria-hidden="true"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0);" title="Logout">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </nav>

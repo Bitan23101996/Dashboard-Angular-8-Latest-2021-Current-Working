@@ -1,0 +1,27 @@
+
+<!-------------------------Header----------------------->
+<app-header></app-header>
+<!-------------------------/Header----------------------->
+
+
+<div class="wrapper" [ngClass]="isMenuVisible ? 'menu-open' : 'menu-close'">
+ <!-------------------------Sidebar Menu----------------------->
+  <app-menu></app-menu>
+  <!-------------------------/Sidebar Menu----------------------->
+
+  <!-------------------------Page Content----------------------->
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+  <!-------------------------/Page Content----------------------->
+</div>
+
+<!-------------------------Footer----------------------->
+<footer class="sticky-footer bg-white">
+  <div class="container my-auto">
+    <div class="copyright text-center my-auto">
+      <span>Copyright © 2021 Admin Dashboard. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+<!-------------------------/Footer----------------------->

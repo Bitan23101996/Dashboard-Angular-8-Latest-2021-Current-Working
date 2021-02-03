@@ -1,0 +1,124 @@
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <ul class="nav flex-column">
+        <!--  <li>
+          <a href="javascript:void(0);" class="menuItem">
+            <span>
+              <i class="fa fa-tachometer icon"></i>
+              <b class="menu-text">Dashboard</b>
+            </span>
+          </a>
+        </li> -->
+
+        <!---------------------Actual Structure---------------------->
+        <li
+          class="nav-item"
+          *ngFor="let menu of menuList; let i = index"
+          [routerLinkActive]="['active']"
+          [class.isSelect]="menu.isSelect"
+        >
+          <!--  [class.active]="menu.active"-->
+          <a
+            class="nav-link menuItem"
+            href="javascript:void(0);"
+            (click)="toggleMenu(i)"
+            *ngIf="menu.menuLists != null"
+          >
+            <span>
+              <i
+                class="icon"
+                [ngClass]="menu.menuIconUrl != null ? menu.menuIconUrl : ''"
+              ></i>
+              <b class="menu-text">{{ menu.menuTitle }}</b>
+              <i
+                class="collapse-arrow fa fa-chevron-right mr-3 mt-1 float-right"
+              ></i>
+            </span>
+          </a>
+
+          <a
+            class="nav-link menuItem"
+            [routerLink]="menu.menuAction"
+            href="javascript:void(0);"
+            (click)="toggleMenu(i)"
+            *ngIf="menu.menuLists == null"
+          >
+            <span>
+              <i
+                class="icon"
+                [ngClass]="menu.menuIconUrl != null ? menu.menuIconUrl : ''"
+              ></i>
+              <b class="menu-text">{{ menu.menuTitle }}</b>
+            </span>
+          </a>
+          <ul
+            class="nav flex-column"
+            #submenu
+            [ngStyle]="
+              menu.isSelect && isMenuVisible
+                ? { display: 'block', height: 'auto' }
+                : { display: 'none' }
+            "
+          >
+            <li
+              class="nav-item"
+              *ngFor="let submenu of menu.menuLists; let j = index"
+              [routerLinkActive]="['active']"
+            >
+              <!--[class.active]="submenu.active"-->
+              <a
+                class="nav-link"
+                [routerLink]="submenu.menuAction"
+                href="javascript:void(0);"
+                (click)="toggleSubMenu(i, j)"
+                *ngIf="submenu.menuLists != null"
+              >
+                <i class="fa fa-circle submenu-icon mr-1"></i>
+                <span class="submenu-text"> {{ submenu.menuTitle }} </span
+                ><!--[ngClass]="isMenuVisible ? 'd-block': 'd-none'"-->
+                <i
+                  style="margin-top: 20px"
+                  class="collapse-arrow fa fa-chevron-right float-right"
+                ></i>
+              </a>
+              <a
+                class="nav-link"
+                [routerLink]="submenu.menuAction"
+                href="javascript:void(0);"
+                (click)="toggleSubMenu(i, j)"
+                *ngIf="submenu.menuLists == null"
+              >
+                <i class="fa fa-circle submenu-icon mr-1"></i>
+                <span class="submenu-text"> {{ submenu.menuTitle }} </span>
+              </a>
+              <!--Sub menu End-->
+              <ul
+                #childSubMenu
+                [ngStyle]="
+                  submenu.isSelect
+                    ? { display: 'block', height: 'auto' }
+                    : { display: 'none' }
+                "
+              >
+                <li
+                  *ngFor="let childSubMenu of submenu.menuLists"
+                  [class.isSelect]="childSubMenu.isSelect"
+                >
+                  <a
+                    [routerLink]="childSubMenu.menuAction"
+                    href="javascript:void(0);"
+                    (click)="toggleChildSubMenu(i, j, childSubMenu.menuId)"
+                  >
+                    <i class="fa fa-circle-thin child-submenu-icon mr-1"></i>
+                    <span class="submenu-text">
+                      {{ childSubMenu.menuTitle }}</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>

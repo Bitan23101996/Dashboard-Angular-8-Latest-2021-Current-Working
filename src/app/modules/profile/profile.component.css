@@ -1,0 +1,180 @@
+/***************Profile card Customization**************/
+
+.profile-card .card-header {
+    padding: 0.1rem 0.6rem !important;
+    margin-bottom: 0;
+    padding-top: 7px !important;
+    background-color: rgba(255, 255, 255, 0.19);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.profile-card .card {
+    border-radius: 0;
+}
+
+.profile-card .card:hover {
+    /* cursor: pointer; */
+    box-shadow: 0px 4px 3px #ccc;
+}
+
+.profile-card .card-body {
+    padding: 0.4rem;
+}
+
+.profile-card .primary-border-top {
+    border-top: 4px solid #2f723a;
+}
+
+.profile-card .secondary-border-top {
+    border-top: 4px solid #75259c;
+}
+
+.profile-card .card-icon {
+    font-size: 20px;
+    /* margin-right: 15px; */
+    margin-right: 5px;
+}
+
+.profile-card .usercard-info h1 {
+    font-size: 3rem;
+    font-family: Desdemona;
+    letter-spacing: 1px;
+}
+
+.profile-card .usercard-info p {
+    margin-bottom: 0;
+    font-size: 1.3rem;
+    font-weight: 100;
+    font-variant: ordinal;
+    /* font-family: Georgia; */
+    font-family: Desdemona;
+    letter-spacing: 0px;
+}
+
+.user-email{
+    color: #75259c;
+    font-size: 1.2em;
+}
+/* .profile-card .usercard-info p span {
+    font-size: 1.5rem;
+    font-family: Times New Roman, Times, serif;
+    font-weight: 600;
+    font-variant: ordinal;
+    font-family: Times New Roman;
+    letter-spacing: 1.2px;
+} */
+
+.profile-card ul.striped li {
+    padding: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+
+div.striped{
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+}
+
+.profile-card .pdfUploadFileIcon {
+    cursor: pointer;
+}
+
+
+/*****************Profile Image Customization******************/
+
+.profile-card .profile-upload {
+    position: relative;
+    max-width: 250px;
+    margin: auto;
+    /* margin-top: -105px;
+     */
+    margin-top: 15px;
+}
+
+.profile-card .profile-upload .profile-edit {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    bottom: -3px;
+    width: 100%;
+}
+
+.profile-card .profile-upload .profile-edit input {
+    display: none;
+}
+
+.profile-card .profile-upload .profile-edit input+label {
+    display: inline-block;
+    /* width: 100%; */
+    width: 200px;
+    height: 40px;
+    margin-bottom: -4px;
+    border-radius: 5%;
+    background: #10101082;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .12);
+    cursor: pointer;
+    font-weight: 400;
+    transition: all .2s ease-in-out;
+}
+
+.profile-card .profile-upload .profile-edit input+label:after {
+    /* content: "\2710"; */
+    content: "Change Photo";
+    font-family: FontAwesome;
+    color: #ffffff;
+    position: absolute;
+    top: 3px;
+    /* left: 0;*/
+    left: -45px;
+    right: 0;
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    /* transform: rotate(180deg); */
+}
+
+.profile-card .profile-upload .profile-preview {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border-radius: 0;
+    border: 1px solid #ececec;
+}
+
+.profile-card .profile-upload .profile-preview>div {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 100%; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-image: url("assets/images/user.jpg"); */
+}
+
+.profile-card .primary-text-color {
+    color: #75259c;
+}
+
+.profile-card .secondary-text-color {
+    color: #2f723a;
+}
+
+.profile-card .actionIcon {
+    font-size: 25px;
+    padding: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.profile-card .editActionIcon {
+    color: #75259c;
+}
+
+.profile-card .cancelActionIcon {
+    color: red;
+}
+
+.profile-card .saveActionIcon {
+    color: #2f723a;
+}

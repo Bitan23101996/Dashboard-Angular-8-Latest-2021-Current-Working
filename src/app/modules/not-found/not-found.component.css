@@ -1,0 +1,30 @@
+.notFound-Text {
+    font-size: 1.25rem;
+    /* font-weight: 300; */
+    font-weight: 600;
+}
+
+.img-error {
+    max-width: 20rem;
+}
+
+.img404 {
+    width: 100%;
+    height: 400px;
+    max-height: 100vh;
+}
+
+
+/*Comment this class if use svg image*/
+
+.main-content {
+    background: #fff;
+}
+
+
+/* .error-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-y:auto;
+} */
